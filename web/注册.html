@@ -95,21 +95,12 @@
             evt.stopPropagation();
             evt.preventDefault();
         }
-        window.onload=function(){
-            var register=document.getElementById("register");
-            register.addEventListener("invalid",invalidHandler,true);
-            document.getElementById("age").setCustomValidity("年龄不能通过验证！");
-        }
     </script>
 </head>
 <body background="1.jpg">
 <form id="register" name="register">
     <label for="firstName"><span>姓名</span>
         <input name="firstName" type="text" title="姓名" placeholder="请输入您的姓名" required />
-    </label>
-    <label for="age"><span>年龄</span>
-        <input id="age" name="age" type="range" min="0" max="99" step="1" value="20" onchange="displayAage.value=this.value" />
-        <output name="displayAage">20</output>
     </label>
     <label for="emailaddress"><span>邮箱</span>
         <input type="email" name="emailaddress" title="邮箱" placeholder="请输入您的邮箱" required />
@@ -120,7 +111,7 @@
     <label for="country"><span>地址</span>
         <input name="country" type="text" title="地址"  />
     </label>
-    <input href="gwc.html" type="submit" name="submit" value="提交" onclick="clearError()" />
+    <input href="购物车.html" type="submit" name="submit" value="提交" onclick="clearError()" />
 
     <div id="error"></div>
 </form>
